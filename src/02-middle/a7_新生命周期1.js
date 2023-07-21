@@ -39,6 +39,10 @@ export default class App_life_new extends Component {
         <hr></hr>
         <li>constructor =》getDerivedStateFromProps=》 render =》 componentDidMount</li>
         <li>componentWillReceiveProps =》 shouldComponentUpdate=》 getDerivedStateFromProps =》 render  =》getSnapshotBeforeUpdate=》 componentDidUpdate =》 </li>
+
+        <hr></hr>
+        <li>`PureComponent`自动对比前后state与props来减少`shouldComponentUpdate`的使用</li>
+        <li> export default class App_life_new extends PureComponent {}</li>
       </div>
     )
   }
