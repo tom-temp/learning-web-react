@@ -23,13 +23,14 @@ import App_life_doing_ex1 from "./02-middle/a6_生命周期_进行_案例1";
 import App_life_new from "./02-middle/a7_新生命周期1";
 import App_swiper from "./02-middle/a8_swiper-example";
 import App_b1 from "./02-middle/b1_函数式-hooks"
-import B2_func_todolist from "./02-middle/b2_todolist";
+import B2_func_todolist from "./02-middle/b2_useState_todolist";
 import App_useEffect from "./02-middle/b3_useEffect_模拟生命周期";
+import App_b4_usecallback from "./02-middle/b4_useCallback_备份状态";
 
 
 const root = createRoot(document.getElementById("root"));
 root.render(
     // <StrictMode>
-        <App_useEffect/>
+        <App_b4_usecallback/>
     // </StrictMode>
     )
