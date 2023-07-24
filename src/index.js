@@ -26,11 +26,12 @@ import App_b1 from "./02-middle/b1_函数式-hooks"
 import B2_func_todolist from "./02-middle/b2_useState_todolist";
 import App_useEffect from "./02-middle/b3_useEffect_模拟生命周期";
 import App_b4_usecallback from "./02-middle/b4_useCallback_备份状态";
+import App_b7_useContext from "./02-middle/b7_useContext_跨级通信";
 
 
 const root = createRoot(document.getElementById("root"));
 root.render(
     // <StrictMode>
-        <App_b4_usecallback/>
+        <App_b7_useContext/>
     // </StrictMode>
     )
