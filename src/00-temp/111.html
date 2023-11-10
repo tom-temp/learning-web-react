@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        .audio-control {
+            text-align: center;
+        }
+        .container {
+            /* overflow: hidden; */
+            /* 文字居中 */
+            text-align: center;
+        }
+
+        .text {
+            /* 开始位置位于父组件上端，但由于使用其会改变元素几何属性，造成reflow，所以不推荐 */
+            margin-top: -10px;
+            /* 推荐使用transform，不会是浏览器reflow，效果为向右偏移0px，向下偏移-10px */
+            transform: translate(0px, -10px);
+            /* 让这个元素变化时平滑，其动画时间为0.2s */
+            transition: 0.2s;
+
+            background-color: antiquewhite;
+            height: 600px;
+        }
+        .text li {
+            /* 行内文字剧中设置 */
+            height: 30px;
+            line-height: 30px;
+            background-color: rgb(192, 192, 235);
+            transition: 0.2s;
+            list-style: none;
+        }
+        /* 内样式写法 */
+        .text li.active{
+            /* 不推荐动画中改变font-size，因为它也可能引起浏览器reflow */
+            /* font-size: 1em; */
+            /* 使用transform来进行放大 */
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" checked="checked">
+    <hr>
+    <div class="audio-control">
+        <audio controls="controls"></audio>
+    </div>
+
+    <div class="container">
+        <div class="text">
+            <li>123</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li class="active">Fugiat, cumque nihil!</li>
+            <li>Voluptatem, fugiat repellendus.</li>
+            <li>Incidunt, saepe repellendus.</li>
+            <li>Ab, inventore voluptatum.</li>
+        </div>
+    </div>
+
+
+
+<script>
+function parseLrc(){
+    lrc_obj={}
+    var lines = lrc.split("\n");
+    for (var i=0; i<lines.length; i++){
+        var str = lines[i];
+        var part = str.split("]")
+
+        // 将[12:30.12]word 中时间部分转换为时间
+        var time_temp = part[0].substring(1)
+        time_temp = time_temp.split(":")
+        time_temp = (+time_temp[0])*60 + (+time_temp[1])
+        // 形成obj
+        var obj = {
+            time:time_temp,
+            word:part[1]
+        }
+        lrc_obj.push(obj)
+    }
+    return lrc_obj
+}
+
+
+</script>
+</body>
+</html>

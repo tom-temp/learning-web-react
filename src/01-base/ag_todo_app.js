@@ -75,6 +75,7 @@ export default class App_ag_todo extends Component {
             <li key={item.id} >
                 <button onClick={()=>this.act_btn_del(index)}>del</button>
                 {/* 插入html */}
+                {/* #Question 函数中无法直接使用map设置网页文本 */}
                 <span dangerouslySetInnerHTML={{__html:item.text}}></span>
                 {/* {item.text} */}
             </li>)
@@ -90,7 +91,7 @@ export default class App_ag_todo extends Component {
         <ul>
             {this.show_todo_list()}
         </ul>
-        {/* 条件渲染 */}
+        {/* #Question 条件渲染 */}
         {this.state.list_todo.length===0?<div>todolist无内容</div>:null}
         {this.state.list_todo.length===0 && <div>todolist无内容</div>}
       </div>

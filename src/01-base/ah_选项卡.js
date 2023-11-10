@@ -142,6 +142,7 @@ class Theatre extends Component {
                         this.state.theatres.map((item)=>
                         <li key={item.tid} className='theatres_one'>
                             <div>
+                                {/* #Question 导入变量是否在js总加$:只有变量不需要，变量+文本需要 */}
                                 {item.name} <span className='price'>${item.minPrice}元起</span>
                             </div>
                             <div className='theatres_position'>

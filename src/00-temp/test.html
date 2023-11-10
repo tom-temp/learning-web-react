@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        .container {
+            overflow: hidden;
+        }
+
+        .text {
+            /* 开始位置位于父组件上端，但由于使用其会改变元素几何属性，造成reflow，所以不推荐 */
+            margin-top: -10px;
+            /* 推荐使用transform，不会是浏览器reflow，效果为向右偏移0px，向下偏移-10px */
+            transform: translate(0px, -10px);
+            /* 让这个元素变化时平滑，其动画时间为0.2s */
+            transition: 0.2s;
+
+            background-color: antiquewhite;
+            height: 60px;
+        }
+        .text li {
+            /* 行内剧中设置 */
+            height: 30px;
+            line-height: 30px;
+        }
+        .active {
+
+        }
+    </style>
+</head>
+<input>
+    <input type="checkbox" checked="checked">
+    <audio controls="controls"></audio>
+    <div class="container">
+        <div class="text">
+            <li>123</li>
+        </div>
+    </div>
+
+</body>
+</html>

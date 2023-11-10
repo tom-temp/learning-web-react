@@ -11,13 +11,14 @@ export default class App_ai_setstate extends Component {
         this.setState({
             countnumber:this.state.countnumber+1
         },()=>{console.log("回调函数, 这个log最后出",this.state.countnumber)})
+        // #Question 异步执行后状态会同步到网站上，但无法在接下来使用
 
         this.setState({
             countnumber:this.state.countnumber+1
         })
         console.log(this.state.countnumber)
         this.setState({
-            countnumber:this.state.countnumber+1
+            countnumber:this.state.countnumber+200
         })
         console.log(this.state.countnumber)
     }
@@ -64,6 +65,7 @@ export default class App_ai_setstate extends Component {
         list_data:list_data
     },()=>{
         console.log(this.state.list_data)
+        // #Question better-scroll
         new BetterScorll(".scroll-window") //必须包裹在被撑大的盒子的外部一层
     })
   }
