@@ -68,6 +68,7 @@ export default class App_a1_input extends Component {
         }>reset</button>
         <hr/>
         <li>ref传递</li>
+        {/* 下面这个中,value无意义 */}
         <Card_input2 what="用户名" value={this.state.username} type="text" ref={this.ref_username}/>
         <button onClick={()=>this.ref_username.current.state.value}>1212</button>
         <button onClick={()=>this.ref_username.current.clean()}>清空</button>
