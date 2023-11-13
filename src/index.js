@@ -31,10 +31,11 @@ import App_b7_useContext from "./02-middle/b7_useContext_跨级通信";
 import App_b8_useReducer from "./02-middle/b8_useReducer";
 import App_b9_useMyFunction_tab from "./02-middle/b9_useMyfunction";
 
+import App_test from "./02-middle/test";
 
 const root = createRoot(document.getElementById("root"));
 root.render(
     // <StrictMode>
-        <APP/>
+        <App_test/>
     // </StrictMode>
     )
