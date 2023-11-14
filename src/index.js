@@ -30,12 +30,14 @@ import App_b4_usecallback from "./02-middle/b4_useCallback_备份状态";
 import App_b7_useContext from "./02-middle/b7_useContext_跨级通信";
 import App_b8_useReducer from "./02-middle/b8_useReducer";
 import App_b9_useMyFunction_tab from "./02-middle/b9_useMyfunction";
+import App_C1_tab from "./03-router/c1-router";
+import C1_router_do from "./03-router/c1-router-do";
 
 import App_test from "./02-middle/test";
 
 const root = createRoot(document.getElementById("root"));
 root.render(
     // <StrictMode>
-        <App_test/>
+        <C1_router_do/>
     // </StrictMode>
     )
