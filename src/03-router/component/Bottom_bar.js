@@ -1,17 +1,18 @@
 import React from 'react'
 import { NavLink  } from 'react-router-dom/cjs/react-router-dom.min'
+import style from './Bottom_bar.module.css'
 
 export default function BottomBar() {
   return (
-    <div>
+    <div className={style.navbar}>
         <hr></hr>
-        <li>
-        <NavLink activeClassName="nav-active" to="/films">Movies</NavLink>
-        </li><li>
-        <NavLink activeClassName="nav-active" to="/theater">Theater</NavLink>
-        </li><li>
-        <NavLink activeClassName="nav-active" to="/setting">Setting</NavLink>
-        </li>
+        <span>
+        <NavLink activeClassName={style.nav_active} to="/films">Movies</NavLink>
+        </span><span>
+        <NavLink activeClassName={style.nav_active} to="/theater">Theater</NavLink>
+        </span><span>
+        <NavLink activeClassName={style.nav_active} to="/setting">Setting</NavLink>
+        </span>
         <hr></hr>
     </div>
   )

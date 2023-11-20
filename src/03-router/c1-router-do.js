@@ -1,7 +1,7 @@
 import React from 'react'
 import BottomBar from './component/Bottom_bar'
 import IndexRouter from './router/IndexRouter'
-
+import './default.css'
 
 
 
