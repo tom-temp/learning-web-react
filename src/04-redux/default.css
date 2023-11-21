@@ -1,0 +1,15 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+ul {
+    list-style: none;
+}
+
+html,body {
+    height: 100%;
+}
+
+/* a {
+    text-decoration: none;
+} */

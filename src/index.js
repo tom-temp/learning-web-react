@@ -32,12 +32,14 @@ import App_b8_useReducer from "./02-middle/b8_useReducer";
 import App_b9_useMyFunction_tab from "./02-middle/b9_useMyfunction";
 import App_C1_tab from "./03-router/c1-router";
 import C1_router_do from "./03-router/c1-router-do";
+import App from "./04-redux/c2-router";
+
 
 import App_test from "./02-middle/test";
 
 const root = createRoot(document.getElementById("root"));
 root.render(
     // <StrictMode>
-        <C1_router_do/>
+        <App/>
     // </StrictMode>
     )
