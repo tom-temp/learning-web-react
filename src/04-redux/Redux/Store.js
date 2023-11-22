@@ -1,13 +1,18 @@
-import {createStore, combineReducers} from 'redux'
+import {createStore, combineReducers, applyMiddleware} from 'redux'
+import reduxPromise from 'redux-promise'
 import BottomBarReducer from './Reducer/BottomBarReducer'
 import CityReducer from './Reducer/CityReducer'
+import TestReducer from './Reducer/TestReducer'
+import GetTheaterReducer from './Reducer/GetTheaterReduce'
 
 const reducer = combineReducers({
     BottomBarReducer,
-    CityReducer
+    CityReducer,
+    TestReducer,
+    GetTheaterReducer
 })
 
-const store = createStore(reducer)
+const store = createStore(reducer, applyMiddleware(reduxPromise))
 export default store
 
 

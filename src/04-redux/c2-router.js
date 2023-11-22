@@ -1,17 +1,15 @@
 import {React, useEffect, useState} from 'react'
-import BottomBar from './component/Bottom_bar'
-import IndexRouter from './router/IndexRouter'
 import './default.css'
+import IndexRouter from './router/IndexRouter'
 import store from './Redux/Store'
-
-
+import BottomBar from './component/Bottom_bar'
 
 export default function App() {
 
   const [BottomBarShow, setBottomBarShow] = useState(true)
   useEffect(() => {
     store.subscribe( ()=>{
-      console.log("@App 订阅数值发生改变: showBottomBar", store.getState().BottomBarReducer.showBottomBar)
+      console.log("@App 订阅中: showBottomBar", store.getState().BottomBarReducer.showBottomBar)
       setBottomBarShow(store.getState().BottomBarReducer.showBottomBar)
     } )
     return (
@@ -20,7 +18,8 @@ export default function App() {
   }, [])
 
   return (
-    <div>C1_router_do
+    <div>
+      {/* C1_router_do */}
         <IndexRouter>
           {BottomBarShow && <BottomBar></BottomBar>}
         </IndexRouter>

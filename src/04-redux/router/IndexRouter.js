@@ -7,6 +7,7 @@ import Page404 from '../view/P_404'
 import Detial from '../view/Detial'
 import Login from '../view/Login'
 import City from '../view/City'
+import TheaterSearch from '../view/TheaterSearch'
 
 function isAuth(){
   console.log(localStorage.getItem("token"))
@@ -26,6 +27,7 @@ export default class IndexRouter extends Component {
                 <Route path="/detail/:filmid"  component={Detial}></Route>
                 <Route path="/theater" component={Theater} exact></Route>
                 <Route path="/theater/city" component={City}></Route>
+                <Route path="/theater/search" component={TheaterSearch}></Route>
                 <Route path="/setting" render={()=>
                   isAuth()?<Setting></Setting>:<Redirect to="/login"></Redirect> }></Route>
                 <Route path="/login"   component={Login}></Route>

@@ -1,6 +1,6 @@
 const BottomBarReducer = (prevState={showBottomBar : true}, { type, payload })=> {
     let newState = {...prevState}
-    console.log("@Store 进入BottomBarReducer")
+    // console.log("@Store 进入Reducer")
     switch (type) {
 
     case "hideBottomBar":
