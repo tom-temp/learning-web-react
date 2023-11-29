@@ -23,22 +23,27 @@ import { createRoot } from 'react-dom/client';
 // import App_life_doing_ex1 from "./02-middle/a6_生命周期_进行_案例1";
 // import App_life_new from "./02-middle/a7_新生命周期1";
 // import App_swiper from "./02-middle/a8_swiper-example";
-import App_b1 from "./02-middle/b1_函数式-hooks"
-import B2_func_todolist from "./02-middle/b2_useState_todolist";
-import App_useEffect from "./02-middle/b3_useEffect_模拟生命周期";
-import App_b4_usecallback from "./02-middle/b4_useCallback_备份状态";
-import App_b7_useContext from "./02-middle/b7_useContext_跨级通信";
-import App_b8_useReducer from "./02-middle/b8_useReducer";
-import App_b9_useMyFunction_tab from "./02-middle/b9_useMyfunction";
-import App_C1_tab from "./03-router/c1-router";
-import C1_router_do from "./03-router/c1-router-do";
+// import App_b1 from "./02-middle/b1_函数式-hooks"
+// import B2_func_todolist from "./02-middle/b2_useState_todolist";
+// import App_useEffect from "./02-middle/b3_useEffect_模拟生命周期";
+// import App_b4_usecallback from "./02-middle/b4_useCallback_备份状态";
+// import App_b7_useContext from "./02-middle/b7_useContext_跨级通信";
+// import App_b8_useReducer from "./02-middle/b8_useReducer";
+// import App_b9_useMyFunction_tab from "./02-middle/b9_useMyfunction";
+// import App_C1_tab from "./03-router/c1-router";
+// import C1_router_do from "./03-router/c1-router-do";
 // import App from "./04-redux/c2-router";
-import App from "./05-reactredux/c3-reactredux";
+// import App from "./05-reactredux/c3-reactredux";
+// import { store,persistor } from "./05-reactredux/Redux/Store";
+
+import App from "./06-antmobile/c4-reactredux";
+import { store } from "./06-antmobile/Redux/Store";
+
 
 import { Provider } from "react-redux";
-import { store,persistor } from "./05-reactredux/Redux/Store";
-import { PersistGate } from 'redux-persist/integration/react';
-import App_test from "./02-middle/test";
+// import { PersistGate } from 'redux-persist/integration/react';
+
+// import App_test from "./02-middle/test";
 
 
 const root = createRoot(document.getElementById("root"));
@@ -46,7 +51,7 @@ root.render(
     <Provider store={store}>
     {/* <PersistGate loading={null} persistor={persistor}> */}
     {/* // <StrictMode> */}
-        <App/>
+    <App/>
     {/* // </StrictMode> */}
     {/* </PersistGate> */}
     </Provider>
