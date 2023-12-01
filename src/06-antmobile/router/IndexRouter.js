@@ -20,7 +20,7 @@ export default class IndexRouter extends Component {
     return (
       <div>
         <HashRouter>
-            {this.props.children}
+
             <Switch>
                 <Route path="/films" component={Films}></Route>
                 <Route path="/detail/:filmid"  component={Detial}></Route>
@@ -34,6 +34,7 @@ export default class IndexRouter extends Component {
                 <Redirect from='/' to="/films" exact></Redirect>
                 <Route component={Page404}></Route>
             </Switch>
+            {this.props.children}
         </HashRouter>
       </div>
     )

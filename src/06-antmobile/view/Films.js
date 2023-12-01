@@ -24,7 +24,7 @@ function Films(props) {
           )}
       </Swiper>
 
-      <Tabs style={{position:"sticky", top:"0px", backgroundColor:"white"}}
+      <Tabs style={{position:"sticky", top:"0px", backgroundColor:"white", zIndex:"99"}}
             onChange={(value)=>props.history.push(value)}
             activeKey={props.location.pathname}
       >
