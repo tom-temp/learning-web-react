@@ -36,23 +36,23 @@ import { createRoot } from 'react-dom/client';
 // import App from "./05-reactredux/c3-reactredux";
 // import { store,persistor } from "./05-reactredux/Redux/Store";
 
-import App from "./06-antmobile/c4-reactredux";
-import { store } from "./06-antmobile/Redux/Store";
+// import App from "./06-antmobile/c4-reactredux";
+// import { store } from "./06-antmobile/Redux/Store";
+// import { Provider } from "react-redux";
 
-
-import { Provider } from "react-redux";
 // import { PersistGate } from 'redux-persist/integration/react';
 
 // import App_test from "./02-middle/test";
 
+import App from "./07-mobx/App";
 
 const root = createRoot(document.getElementById("root"));
 root.render(
-    <Provider store={store}>
-    {/* <PersistGate loading={null} persistor={persistor}> */}
-    {/* // <StrictMode> */}
+    // <Provider store={store}>
+    // <PersistGate loading={null} persistor={persistor}>
+    // <StrictMode>
     <App/>
-    {/* // </StrictMode> */}
-    {/* </PersistGate> */}
-    </Provider>
+    // </StrictMode>
+    // </PersistGate>
+    // </Provider>
     )

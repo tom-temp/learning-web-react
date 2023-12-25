@@ -1,0 +1,39 @@
+.navbar{
+    background-color: antiquewhite;
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+}
+
+.navbar span {
+    /* background-color: blue; */
+    /* height: 40px; */
+    line-height: 40px;
+    flex: 1;
+    /* vertical-align: middle;
+    justify-content: center;
+    align-items:center */
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar .nav_active {
+    color: red;
+}
+
+.navbar .nav_active:-webkit-any-link {
+    color: red;
+}
+
+.navbar a:-webkit-any-link {
+    color: grey;
+}
+
+/* .navbar>.nav-noactive {
+    color: grey;
+} */
